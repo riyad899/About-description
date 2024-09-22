@@ -1,0 +1,209 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #121212, #333333);
+    color: #f4f4f4;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #1c1c1c;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo a {
+    font-size: 1.5rem;
+    color: #fcfcfc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toggle__btn {
+    display: none;
+    font-size: 2rem;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 100px;
+}
+
+.nav__links li {
+    margin: 0 15px;
+}
+
+.nav__links li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+}
+
+.nav__links li a:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Home Section Styling */
+#home {
+    height: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#home .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+#home h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+#home p {
+    font-size: 1.2rem;
+}
+
+#home:hover .overlay {
+    transform: scale(1.05);
+}
+
+/* Section Styling */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Cryptocurrency and Currency Sections */
+#details {
+    background: linear-gradient(to right, #333333, #444444);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: left;
+}
+
+#details h3, #details h4 {
+    color: #00ffcc;
+}
+
+#details ul {
+    margin-left: 20px;
+}
+
+#details li {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+/* About Section Styling */
+#about {
+    background-color: #222222;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#about p {
+    margin-bottom: 15px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1c1c1c;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Keyframes for About Section Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav__links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav__links.active {
+        display: flex;
+        background-color: #1c1c1c;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav__links li {
+        margin: 10px 0;
+    }
+
+    .toggle__btn {
+        display: block;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Media Query for Smaller Devices */
+@media screen and (max-width: 480px) {
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+}
