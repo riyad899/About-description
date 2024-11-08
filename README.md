@@ -4,7 +4,7 @@ Welcome to the **About Description** project! This page provides detailed inform
 
 ## Live Demo 🌐
 
-Check out the live version of the project [here](https://riyad-x.github.io/About-description/).
+Check out the live version of the project [here](https://riyad899.github.io/About-description/).
 
 ## Overview 🌍💱
 
